@@ -1,0 +1,75 @@
+body{
+  font-family: verdana,sans-serif;
+  color: #fffd;
+  background: #0B4E9A;
+  margin: 0;
+}
+h3{
+    text-align: center;
+}
+.links1{
+  background: #0000;
+  padding: 1em;
+  
+} 
+.links1 a{
+  color: #fffd; 
+  margin-right:1em;
+  background: #3ae;
+  padding: 0.5em;
+  border-radius: 9px
+} 
+form > div{
+  display: grid;
+  margin-top: 0.7em;
+  color: #fffd;
+}
+form > div > input{
+  height: 2em; 
+}
+.botoes{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  height: 1em;
+}
+select, button, input, textarea{
+  border: 0;
+  border-radius: 9px;
+  transition: 0.3s
+}
+select:hover, button:hover, input:hover, textarea:hover, a:hover{
+  opacity: .7
+}
+form,h1{
+  margin: auto;
+  width: 100%;
+  max-width: 690px;
+}
+h1{
+    text-align: center
+}
+.listagem{
+  width: 90%;
+  margin: auto;
+  text-align: center;
+}
+.listagem tr:nth-child(even){
+  background: #fff5;
+}
+
+.listagem tr:nth-child(odd){
+  background: #0005;
+}
+.listagem a {
+  color: #fff;
+}
+.edit, .del {
+  width: 3em !important;
+  display: block;
+}
+.botoes{
+height: 1em!important
+} 
+select{
+height: 2.25em;
+}

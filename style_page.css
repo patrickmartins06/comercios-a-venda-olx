@@ -1,0 +1,615 @@
+<!--CSS BEGIN-->
+
+<style>
+    @media only screen and (max-width: 600px) {
+        #anuncie_estabelecimento {
+            display: flex;
+            flex-direction: column
+        }
+
+        #anuncie_estabelecimento span {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 0 2em;
+            line-height: 25px;
+            margin-top: 30px
+        }
+    }
+
+    #arrowsK i {
+        background: #fff7;
+        padding: 10px;
+        border-radius: 999px;
+    }
+
+    #icomercios1 {
+        border: 0;
+        width: 100%;
+        overflow: hidden !important;
+    }
+
+    #adicionar_comercio {
+        justify-content: center
+    }
+
+    #adicionar_comercio>div {
+        max-width: 1100px;
+    }
+
+    #adicionar_comercio input,
+    #adicionar_comercio textarea,
+    #adicionar_comercio select {
+        margin-bottom: 5px;
+        border-radius: 5px
+    }
+
+    #adicionar_comercio .botoes {
+        display: flex;
+        justify-content: end;
+    }
+
+    #adicionar_comercio .botoes input,
+    #adicionar_comercio .botoes button {
+        border: 1px solid #fff !important;
+        border: 1px solid #fff !important;
+        padding: 10px;
+        font-size: 15px;
+        margin: 0;
+        border-radius: 5px;
+        margin: 0 5px;
+        background: orange;
+        color: #fff;
+        margin-top: 5px
+    }
+
+    /*Image Upload*/
+    #input_files_a {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 5px;
+        flex-direction: column;
+    }
+
+    #input_files_a>div>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 5px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    #input_files_a div span:nth-child(2) {
+        background: #eee !important;
+        height: 155px;
+        width: 100%;
+    }
+
+
+
+    #input_files_a label {
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        cursor: pointer;
+        transition: .3s
+    }
+
+    #input_files_a label:hover {
+        opacity: .5
+    }
+
+
+
+    #anuncie_estabelecimento span:hover {
+        filter: saturate(1.2);
+        cursor: pointer;
+        opacity: .8
+    }
+
+
+    #selectImages {
+        margin-top: 10px;
+        background: #0000;
+        padding: 7px;
+        border-radius: 5px
+    }
+
+    #selectImages img {
+        width: 50px;
+        height: 50px;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: .3s;
+        opacity: 1;
+        margin: 0 5px;
+    }
+
+    #selectImages img:hover {
+        opacity: .75
+    }
+
+    #painelVisual i {
+        filter: drop-shadow(0 0 2px #000);
+        font-size: 40px;
+        margin: 0 10px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    #painelVisual i:hover {
+        opacity: .75
+    }
+
+    .imgActive {
+        opacity: 1 !important;
+        scale: 1.2
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        #img_preview_main {
+            width: 90% !important;
+            height: 100% !important;
+            z-index: 777 !important;
+            background-size: cover !important;
+            border-radius: 10px;
+        }
+
+        #arrowsK {
+            width: 90% !important;
+        }
+
+        #selectImages {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+        }
+
+        #selectImages img {
+            margin-bottom: 10px
+        }
+
+    }
+
+    #img_preview_main {
+        border-radius: 10px
+    }
+
+    #iPesquisarConsultor {
+        border: 0;
+        width: 603px;
+        height: 412px;
+        overflow: hidden !important;
+        margin: auto;
+
+    }
+
+
+
+    #iPesquisarConsultor {
+        border: 0;
+        width: 603px;
+        height: 412px;
+        overflow: hidden !important;
+        margin: auto;
+        display: block;
+    }
+
+    #c_j_f form {
+        display: grid
+    }
+
+    #c_j_f input {
+        height: 3em;
+        width: 100%
+    }
+
+    #c_j_f textarea {
+        height: 10em
+    }
+
+    #c_j_f input,
+    #c_j_f textarea {
+        margin: .5em 0;
+        border: 1px solid #ccc;
+        border-radius: 9px;
+        padding: 1em
+    }
+
+    #c_j_f h3 {
+        margin: .5em 0
+    }
+
+    #c_j_f .submit {
+        border-bottom: 1px solid #ccc;
+        background: #0b4e9a;
+        color: #fff;
+        float: right;
+        width: 9em
+    }
+
+    .nomeConsultorForm sp {
+        position: absolute;
+        bottom: .825em;
+        right: .3em;
+        font-size: 1.2em;
+        background: #3ae;
+        color: #fff;
+        width: 1.7em;
+        text-align: center;
+        border-radius: 2em;
+        font-weight: 999
+    }
+
+    #iPesquisarConsultor {
+        transition: 0.5s;
+        border-radius: 1em
+    }
+
+    .title {
+        pointer-events: none;
+        color: #555
+    }
+
+    .nomeConsultorForm {
+        display: block ruby;
+        position: relative
+    }
+
+    .nomeConsultorForm sp {
+        position: absolute;
+        bottom: .125em;
+        right: 0;
+        font-size: 1.5em;
+        background: #3ae;
+        color: #fff;
+        width: 1.7em;
+        text-align: center;
+        border-radius: 2em;
+        font-weight: 999
+    }
+
+    .nomeConsultorForm sp2 {
+        position: inherit;
+        width: 10em;
+        background: #28333e;
+        color: #fff;
+        padding: 1em;
+        margin: 1.2em;
+        border-radius: 0em 1em 1em 1em;
+        font-size: .6em;
+        visibility: hidden;
+        z-index: 999;
+        transition: .3s;
+        opacity: 0;
+        font-weight: 222
+    }
+
+    .nomeConsultorForm sp2 a {
+        cursor: pointer;
+        color: #3ae
+    }
+
+    .nomeConsultorForm sp2 a:hover {
+        opacity: .7
+    }
+
+    .nomeConsultorForm sp:hover sp2 {
+        visibility: visible;
+        opacity: 1
+    }
+
+    #icomercios1 {
+        margin-top: 55px
+    }
+
+    @media only screen and (max-width: 600px) {
+        #show_form_aDesk {
+            display: none !important;
+        }
+
+        #show_form_aMobile {
+            display: block !important;
+        }
+    }
+
+    @media only screen and (min-width: 600px) {
+        #show_form_aDesk {
+            display: block !important;
+        }
+
+        #show_form_aMobile {
+            display: none !important;
+        }
+    }
+
+    /* #btn_voltar,
+#iPesquisarConsultor,
+#precisa_consultor_h1,
+#adicionar_comercio,
+#nomeConsultorForm,
+#contato {
+display: none;
+}
+
+#input_files_a input,
+#ob_hd {
+display: none;
+} */
+
+    #iPesquisarConsultor {
+        max-width: 555px;
+    }
+</style>
+<!--CSS END-->
+
+<!--JS BEGIN-->
+<script>
+    function change_image_comercio_view(el) {
+
+        if (document.querySelector(".imgActive") != undefined) {
+            document.querySelector(".imgActive").classList.remove("imgActive")
+        }
+
+        el.classList.add("imgActive")
+        var targetImage = el.getAttribute("src")
+        document.querySelector("#img_preview_main").style.backgroundImage = "url(" + targetImage + ")"
+
+    }
+
+    function see_images_comercios(targetImage, imagesList, selectImagesHTML) {
+        console.log(targetImage);
+        console.log(imagesList);
+        console.log(selectImagesHTML)
+        if (document.querySelector("#painelVisual") != undefined) {
+            document.querySelector("#painelVisual").remove()
+        }
+
+        document.querySelector("body").insertAdjacentHTML("beforeend", `
+
+    <div id="painelVisual" style="position: fixed;left: 0;top: 0;width: ` + window.innerWidth + `px;height:` + window
+            .innerHeight +
+            `px ;display: flex;align-items: center;justify-content: center;flex-direction: column;z-index: 999;">
+
+          <div onclick="blackQuit()" style="background: #000c;width: 100%;height: 100%;position: absolute;z-index: 666;"></div>
+    <div style="width: 100%;height: 80%;display: flex;align-items: center;justify-content: center;flex-direction: column;position: relative;">
+
+                <div id="img_preview_main" style="width: 80%;height: 100%;z-index: 777;background-image: url(https://senae.com.br/scripts/comercios/` +
+            targetImage + `);background-repeat: no-repeat;background-size: cover;background-position: center;">
+                </div>
+
+                <div id="arrowsK" style="position: absolute;width: 80%;display: flex;justify-content: space-between;z-index: 888;">
+                      <i onclick="visual_left_arrow()" class="fa fa-angle-double-left" aria-hidden="true" style=""></i>
+
+                      <i onclick="visual_right_arrow()" class="fa fa-angle-double-right" aria-hidden="true" style=""></i>
+                </div>
+          </div>
+
+          <div id="selectImages" style="z-index: 888;">  
+
+                    ` + selectImagesHTML + `
+
+          </div>
+
+    </div>
+
+      `)
+
+    }
+
+    function blackQuit() {
+        if (document.querySelector("#painelVisual") != undefined) {
+            document.querySelector("#painelVisual").remove()
+        }
+    }
+
+    function visual_left_arrow() {
+        if (document.querySelector(".imgActive").previousElementSibling != null) {
+            var prevImg = document.querySelector(".imgActive").previousElementSibling.getAttribute("src")
+            document.querySelector("#img_preview_main").style.backgroundImage = "url(" + prevImg + ")"
+
+            document.querySelector(".imgActive").previousElementSibling.classList.add("imgActive")
+
+            if (document.querySelectorAll(".imgActive")[1] != undefined) {
+                document.querySelectorAll(".imgActive")[1].classList.remove("imgActive")
+            }
+        }
+    }
+
+    function visual_right_arrow() {
+        if (document.querySelector(".imgActive").nextElementSibling != null) {
+            var prevImg = document.querySelector(".imgActive").nextElementSibling.getAttribute("src")
+            document.querySelector("#img_preview_main").style.backgroundImage = "url(" + prevImg + ")"
+
+            document.querySelector(".imgActive").nextElementSibling.classList.add("imgActive")
+
+            if (document.querySelectorAll(".imgActive")[0] != undefined) {
+                document.querySelectorAll(".imgActive")[0].classList.remove("imgActive")
+            }
+        }
+    }
+</script>
+<!--JS END-->
+
+<!--1-->
+
+<div id="anuncie_estabelecimento" style="display: flex;align-items: center;">
+    <h1 style="margin: 0;flex: 1;">Comércios à Venda em Curitiba</h1>
+
+    <div>
+        <a href="#"><span id="show_form_aDesk" onclick="show_form_a()"
+                style="font-size: 23px;color: #fff;background: orange;padding: 1em;font-weight: 555;border-radius: 12px;box-shadow: 0 0 1em #0003 inset;transition: .3s;">Anuncie
+                Grátis o seu Estabelecimento</span></a>
+
+        <a href="#"><span id="show_form_aMobile" onclick="show_form_a()"
+                style="font-size: 23px;color: #fff;background: orange;padding: 1em;font-weight: 555;border-radius: 12px;box-shadow: 0 0 1em #0003 inset;transition: .3s;">Anuncie
+                Grátis <br>o seu Estabelecimento</span></a>
+    </div>
+
+</div>
+
+<!--2-->
+<!-- <h1 class="ob_hd" id="precisa_consultor_h1" style="text-align:center">Para entrar em Contato com Comércios à Venda
+primeiro você
+precisa escolher um Consultor.</h1>
+
+<h1 class="ob_hd" id="consultar_comercio_a_venda_h1" style="text-align:center">Para entrar em Contato com Comércios à
+Venda primeiro
+você precisa escolher um Consultor.
+</h1>
+
+<iframe onload="resizeIframe(this)" id="iPesquisarConsultor" class="ob_hd" name="icomercios1"
+src="/scripts/consultores/pesquisar.php" style="height: 100px;"></iframe> -->
+<!--3-->
+
+
+<!-- <form class="ob_hd" id="adicionar_comercio" method="POST"
+action="https://senae.com.br/scripts/cadastro/cadastrar_comercio.php" enctype="multipart/form-data">
+<div>
+<span style="font-size:20px;margin-left:15px">Preencha com os dados do seu comércio</span>
+<input placeholder="Valor" class="valor" type="text" name="valor">
+<input oninput="check_exists()" placeholder="Título" class="titulo" type="text" name="titulo">
+<textarea placeholder="Descrição" name="descr" id="descr" class="descr" cols="30" rows="10"></textarea>
+
+<div id="input_files_a" style="">
+<div style="display: flex;">
+<div style="margin-left: 0;">
+<span>Imagem 1</span>
+<label for="img1">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="width: 100%;/*! margin: 2px 0 0 6px; */"
+id="img1" name="img1">
+</div>
+<div style="">
+<span>Imagem 2</span>
+<label for="img2">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img2" name="img2">
+</div>
+<div style="">
+<span>Imagem 3</span>
+<label for="img3">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img3" name="img3">
+</div>
+<div style="">
+<span>Imagem 4</span>
+<label for="img4">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img4" name="img4">
+</div>
+<div style="margin-right: 0;">
+<span>Imagem 5</span>
+<label for="img5">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img5" name="img5">
+</div>
+</div>
+
+<div style="display: flex;">
+<div style="margin-left: auto;">
+<span>Imagem 6</span>
+<label style="" for="img6">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img6" name="img6">
+</div>
+<div style="">
+<span>Imagem 7</span>
+<label style="" for="img7">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img7" name="img7">
+</div>
+<div style="">
+<span>Imagem 8</span>
+<label style="" for="img8">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img8" name="img8">
+</div>
+<div style="">
+<span>Imagem 9</span>
+<label style="" for="img9">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img9" name="img9">
+</div>
+<div style="margin-right: 0;">
+<span>Imagem 10</span>
+<label style="" for="img10">Carregar Imagem</label>
+<input type="file" accept="image/png, image/jpeg" style="" id="img10" name="img10">
+</div>
+</div>
+
+</div>
+
+<input onchange="setcidad()" placeholder="Anunciante" class="anunciante" type="text" name="anunciante">
+<input placeholder="Fone" class="fone" type="text" name="fone">
+<input onchange="setcidad()" placeholder="CEP" class="cep" type="text" name="cep">
+<select onchange="setcidad()" class="uf" type="text" name="uf">
+<option value="0">Estado</option>
+<option value="AC">AC</option>
+<option value="AL">AL</option>
+<option value="AM">AM</option>
+<option value="AP">AP</option>
+<option value="BA">BA</option>
+<option value="CE">CE</option>
+<option value="DF">DF</option>
+<option value="ES">ES</option>
+<option value="GO">GO</option>
+<option value="MA">MA</option>
+<option value="MG">MG</option>
+<option value="MS">MS</option>
+<option value="MT">MT</option>
+<option value="PA">PA</option>
+<option value="PB">PB</option>
+<option value="PE">PE</option>
+<option value="PI">PI</option>
+<option value="PR">PR</option>
+<option value="RJ">RJ</option>
+<option value="RN">RN</option>
+<option value="RO">RO</option>
+<option value="RR">RR</option>
+<option value="RS">RS</option>
+<option value="SC">SC</option>
+<option value="SE">SE</option>
+<option value="SP">SP</option>
+<option value="TO">TO</option>
+</select>
+<select class="cidade" type="text" name="cidade">
+<option value="0">Cidade</option>
+</select>
+<input placeholder="Bairro" class="bairro" type="text" name="bairro">
+<input placeholder="Rua" class="rua" type="text" name="rua">
+<input placeholder="Número" class="numero" type="text" name="numero">
+<input placeholder="Complemento" class="complemento" type="text" name="complemento">
+<div class="botoes">
+<button class="salvar" type="submit" name="adicionar" style="pointer-events: all;">Adicionar</button><br>
+<input class="reset" type="reset" name="limpar" value="Limpar">
+</div>
+</div>
+</form> -->
+
+<iframe onload="resizeIframe(this)" id="icomercios1" name="icomercios1" src="/scripts/comercios/wp.php"
+    style="height: 100px;"></iframe>
+
+<!--5-->
+<!-- <div id="c_j_f" class="ob_hd consultar_comercio_a_venda">
+<h3 style="font-family:verdana">Consultar Comércio à Venda</h3>
+<form method="POST" action="https://senae.com.br/scripts/email/enviar.php" id="contato"
+enctype="multipart/form-data">
+<input onchange="defineEmail()" name="nome" class="nome" placeholder="Seu Nome">
+<input onchange="defineEmail()" name="email" class="email" placeholder="Seu E-mail">
+<input onchange="defineEmail()" name="fone" class="fone" placeholder="Seu Telefone">
+<input onchange="defineEmail()" name="title" class="title" placeholder="Id do Comércio à Venda">
+<input value="0" type="hidden" name="idConsultor" class="idConsultor">
+<label class="nomeConsultorForm">
+<span>
+<input name="consultor" class="consultor" placeholder="Nome do Consultor"><br>
+</span>
+<sp>?<sp2>Ainda não tem consultor? Clique <a href="#pesquisar_consultor_34123">aqui</a> para encontrar um na
+sua região.</sp2>
+</sp>
+</label>
+<input type="hidden" name="cod_acesso" class="cod_acesso" placeholder="Código de Acesso">
+<textarea onchange="defineEmail()" name="mensagem" class="mensagem" placeholder="Sua Mensagem"></textarea>
+<span>
+<input type="submit" value="Consultar" class="submit">
+</span>
+</form>
+</div> -->

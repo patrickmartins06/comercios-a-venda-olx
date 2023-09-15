@@ -1,0 +1,103 @@
+#fornecedores-resultado{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    color: #333;
+    margin: 0em 0.0em
+  }
+  #fornecedores-resultado h3{
+    text-align: center;
+    font-size: 2em;
+    font-family: verdana;
+    margin: 0.5em;
+    color: #333
+  }
+  #fornecedores-resultado > div{
+    border: 1px solid #ddd;
+    margin: 0.4em;
+    border-radius: 9px;
+    padding: 0em 0em
+  }
+  #fornecedores-resultado img{
+    margin: auto;
+    display: block
+  }
+  .fornecedores_pesquisa_box > h3{
+    text-align: center;
+    font-family: verdana;
+    font-size: 1.5em;
+    color: #333;
+  }
+  #fnForm {
+    text-align: center;
+  }
+  #fnForm input, #fnForm select{
+    padding: 1em;
+    border: 1px inset #3ae;
+    border-radius: 9px;
+    color: #fff;
+    background: #3ae;
+  }
+  .cadContato{
+    font-family: verdana;
+    color: #333;
+  }
+  .cadContato img{
+    height: 4em;
+    }
+
+
+
+
+
+  .cadContato > div {
+    display: grid;
+    grid-template-columns: auto auto;
+    border-top:1px solid #eee;
+    
+  }
+  .cadContato > div > div, .cadContato > div > section {
+    padding: 0em 1em
+  }
+  .cadContato > div > div h4{
+    margin: 5px; 
+    text-align: center  
+  }
+  .cadContato > div > div{
+    border-left: 1px solid #eee;
+    text-align: left
+  }
+  
+  .hidd::-moz-selection, .hidd::selection, .hidd{
+    background: none;
+    user-select: none;
+    pointer-events: none;
+    color: #0000!important;
+    text-shadow: 0 0 10px #ccc;
+  }
+  .hidd{
+    background: none;
+    user-select: none;
+    pointer-events: none;
+    color: #0000!important;
+    text-shadow: 0 0 10px #ccc;
+  }
+  
+.show::-moz-selection, .show::selection{
+  background: #3ae;
+  color: #fff!important;
+}
+  .show::-moz-selection, .show::selection, .show{
+    user-select: auto!important;;
+    pointer-events: auto!important;;
+    text-shadow: none!important;
+  }
+.show{
+      color: #3ae!important;
+      user-select: auto!important;;
+      pointer-events: auto!important;;
+      text-shadow: none!important;
+}
+
+  
+
+
